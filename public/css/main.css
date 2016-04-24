@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Opens Sans", sans-serif; }
+
+.nav-wrapper {
+  width: 250px;
+  height: 100vh;
+  background: #1F2A36;
+  position: fixed; }
+
+.nav-display {
+  width: 100%;
+  height: 100%; }
+  .nav-display h1 {
+    width: auto;
+    color: #CA756D;
+    font-size: 35px;
+    padding: 40px 0;
+    margin-left: 15px;
+    border-bottom: 2px solid #f5f5f5; }
+  .nav-display button {
+    width: 170px;
+    height: 38px;
+    color: #1F2A36;
+    font-size: 18px;
+    font-weight: bold;
+    background: #CA756D;
+    margin: 20px 0;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .nav-display button:hover {
+      color: #CA756D;
+      background: #1F2A36;
+      box-shadow: 0px 0px 5px #CA756D; }
+  .nav-display ul {
+    margin-top: 20px;
+    list-style: none; }
+  .nav-display li {
+    color: #f5f5f5;
+    font-size: 18px;
+    line-height: 45px;
+    margin-left: 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .nav-display li:hover {
+      text-decoration: underline; }
+    .nav-display li i {
+      color: #01C101;
+      font-size: 8px;
+      margin-left: 5px;
+      vertical-align: middle; }
+  .nav-display li:nth-child(1) {
+    margin-left: 30px; }
+
+.mail-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
+
+@media (min-width: 769px) {
+  .mail-wrapper {
+    width: calc(100% - 250px);
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px); } }
+.mail-display {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.mail-header {
+  width: 100%;
+  height: 120px;
+  background: #1F2A36;
+  text-align: center;
+  border-bottom: 2px solid #f5f5f5;
+  position: absolute;
+  left: 0;
+  right: 0; }
+  .mail-header h1 {
+    color: #f5f5f5;
+    font-size: 20px;
+    margin-top: 55px; }
