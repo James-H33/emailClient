@@ -4,7 +4,11 @@ var mongoose    = require('mongoose');
 var bodyParser  = require('body-parser');
 
 // Require  Models
-var Mail = require('./models/mailModel');
+// var Mail = require('./models/mailModel');
+
+// Require Routes
+var indexRoutes = require('./routes/indexRoute');
+var mailRoutes = require('./routes/mailRoute');
 
 // Require Fake Database
 var Seed = require('./seedDB');
@@ -22,30 +26,13 @@ app.set('view engine', 'pug');
 // Use Fake Database
 Seed();
 
-app.get('/', function(req, res) {
+
+app.get('/', function(req, res){
   res.redirect('/mail');
 })
 
-
-app.get('/mail', function(req, res) {
-  Mail.find({}, function(err, mail){
-    if(err) {
-      console.log(err);
-    } else {
-      res.render('index', {mailer: mail});
-    }
-  })
-})
-
-app.get('/mail/:id', function(req, res){
-  Mail.findById(req.params.id, function(err, mailUser) {
-    if(err) {
-      console.log(err);
-    } else {
-      res.render('./mail/mail-view', {mailU: mailUser})
-    }
-  })
-})
+app.use('/', indexRoutes);
+app.use('/', mailRoutes);
 
 app.listen(port, portIP, function(){
   console.log('Server has started...');
