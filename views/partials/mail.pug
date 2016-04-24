@@ -2,4 +2,9 @@ section.mail-wrapper
   div.mail-display
     header.mail-header
       h1 Welcome back! James Hall-Treworgy
-    
+    div.mail-box
+      - mailer.forEach(function(mail){
+        li
+          a(href="/mail/" + mail._id + ""): h1= mail.sender
+          p= mail.content
+      - })
