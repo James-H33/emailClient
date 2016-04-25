@@ -4,8 +4,10 @@
 
 .mail-item-wrapper
   width: 100%
-  height: 400px
-  background: #ccc
+  height: 100%
+  min-height: 500px
+  background: #f5f5f5
+  position: relative
   transition: all 0.5s ease
 
 @media (min-width: 769px)
@@ -16,4 +18,89 @@
 
 .mail-item-display
   width: 100%
+  height: 50px
+  position: relative
+  padding: 10px 0
+  background: #f5f5f5
+
+  h1
+    color: $mail-background
+    margin-left: 15px
+    margin-top: 25px
+
+  span
+    color: $mail-background
+    position: absolute
+    top: 40px
+    right: 15px
+
+.mail-content
+  width: calc(100% - 40px)
   height: 100%
+  min-height: 300px
+  padding: 5px
+  margin: 0 auto
+  border-top: 1px solid $mail-background
+
+.mail-reply
+  width: 100%
+  height: 100px
+  background: $mail-background
+  position: absolute
+  bottom: 0px
+
+  button
+    width: 100px
+    height: 38px
+    color: $mail-background
+    font-size: 20px
+    font-weight: bold
+    background: $coral
+    overflow-x: hidden
+    outline: none
+    border: none
+    border-radius: 2px
+    position: absolute
+    right: 15px
+    bottom: 10px
+    transition: all 0.5s linear
+
+    &:hover
+      color: $coral
+      background: $mail-background
+      box-shadow: 0px 0px 10px $coral
+      transition: all 0.3s linear
+
+    &.active-reply
+      width: 0px
+
+  i
+    font-size: 20px
+    position: absolute
+    color: $coral
+    top: 10px
+    right: 15px
+    opacity: 0
+    display: none
+    transition: opacity 0.5s linear
+
+    &.active-reply
+      opacity: 1
+
+
+.reply-box
+  width: 100%
+  height: 100%
+
+  input
+    width: 100%
+    height: 100%
+    font-size: 16px
+    font-weight: bold
+    padding: 5px
+    color: $mail-background
+    background: #f5f5f5
+    display: none
+
+    &.active-reply
+      display: initial

@@ -4,4 +4,13 @@ html
   section.mail-item-wrapper
     div.mail-item-display
       h1= mailU.sender
+      span= mailU.time
+    div.mail-content
       p= mailU.content
+    div.mail-reply
+      button reply
+      i(class="fa fa-times",aria-hidden="true")
+      div.reply-box
+        input(type='textarea', placeholder="Hey, How are you?")
+  include ../partials/compose.pug        
+  include ../partials/footer.pug

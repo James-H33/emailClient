@@ -6,5 +6,6 @@ section.mail-wrapper
       - mailer.forEach(function(mail){
         li
           a(href="/mail/" + mail._id + ""): h1= mail.sender
+          span= mail.time
           p= mail.content
       - })

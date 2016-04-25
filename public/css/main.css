@@ -53,6 +53,9 @@ body {
     transition: all 0.5s ease; }
     .nav-display li:hover {
       text-decoration: underline; }
+    .nav-display li a {
+      color: #f5f5f5;
+      text-decoration: none; }
     .nav-display li i {
       color: #008F00;
       font-size: 8px;
@@ -119,6 +122,7 @@ body {
   .mail-box li {
     height: 60px;
     padding: 5px;
+    position: relative;
     list-style: none;
     border-bottom: 1px solid #1F2A36; }
     .mail-box li h1 {
@@ -137,6 +141,10 @@ body {
       color: #707070;
       font-size: 14px;
       margin-left: 10px; }
+    .mail-box li span {
+      position: absolute;
+      right: 10px;
+      top: 5px; }
   .mail-box li:nth-child(2n+1) {
     background: #ddd; }
 
@@ -144,6 +152,7 @@ body {
   width: 400px;
   height: 400px;
   background: #f5f5f5;
+  display: none;
   opacity: 0;
   position: absolute;
   left: 40%;
@@ -151,8 +160,8 @@ body {
   z-index: 1000;
   -webkit-transform: translateX(200px);
           transform: translateX(200px);
-  -webkit-transition: all 1s ease 0.3s;
-  transition: all 1s ease 0.3s; }
+  -webkit-transition: all 0.5s ease 0.3s;
+  transition: all 0.5s ease 0.3s; }
   .compose-wrapper.active-compose {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -185,8 +194,10 @@ body {
 
 .mail-item-wrapper {
   width: 100%;
-  height: 400px;
-  background: #ccc;
+  height: 100%;
+  min-height: 500px;
+  background: #f5f5f5;
+  position: relative;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
@@ -197,4 +208,82 @@ body {
             transform: translateX(250px); } }
 .mail-item-display {
   width: 100%;
+  height: 50px;
+  position: relative;
+  padding: 10px 0;
+  background: #f5f5f5; }
+  .mail-item-display h1 {
+    color: #1F2A36;
+    margin-left: 15px;
+    margin-top: 25px; }
+  .mail-item-display span {
+    color: #1F2A36;
+    position: absolute;
+    top: 40px;
+    right: 15px; }
+
+.mail-content {
+  width: calc(100% - 40px);
+  height: 100%;
+  min-height: 300px;
+  padding: 5px;
+  margin: 0 auto;
+  border-top: 1px solid #1F2A36; }
+
+.mail-reply {
+  width: 100%;
+  height: 100px;
+  background: #1F2A36;
+  position: absolute;
+  bottom: 0px; }
+  .mail-reply button {
+    width: 100px;
+    height: 38px;
+    color: #1F2A36;
+    font-size: 20px;
+    font-weight: bold;
+    background: #CA756D;
+    overflow-x: hidden;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+    .mail-reply button:hover {
+      color: #CA756D;
+      background: #1F2A36;
+      box-shadow: 0px 0px 10px #CA756D;
+      -webkit-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+    .mail-reply button.active-reply {
+      width: 0px; }
+  .mail-reply i {
+    font-size: 20px;
+    position: absolute;
+    color: #CA756D;
+    top: 10px;
+    right: 15px;
+    opacity: 0;
+    display: none;
+    -webkit-transition: opacity 0.5s linear;
+    transition: opacity 0.5s linear; }
+    .mail-reply i.active-reply {
+      opacity: 1; }
+
+.reply-box {
+  width: 100%;
   height: 100%; }
+  .reply-box input {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    color: #1F2A36;
+    background: #f5f5f5;
+    display: none; }
+    .reply-box input.active-reply {
+      display: initial; }
