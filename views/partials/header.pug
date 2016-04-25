@@ -1,5 +1,6 @@
 head
   meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
   link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300', rel='stylesheet', type='text/css')
   link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
   link(rel="stylesheet", href="/css/main.css")
@@ -10,7 +11,7 @@ body
       ul
         li
           button Compose
-        li Inbox 
+        li: a(href="/mail") Inbox
           i(class="fa fa-circle",aria-hidden="true")
         li Sent
         li Trash

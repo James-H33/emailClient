@@ -5,19 +5,23 @@ var Mail = require('./models/mailModel');
 var data = [
   {
     sender: 'John Smith',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.',
+    time: 'March 1, 2016'
   },
   {
     sender: 'Kyle Mongo',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.',
+    time: 'March 7, 2016'
   },
   {
     sender: 'Jane Hidler',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.'
+    content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.',
+    time: 'March 15, 2016'
   },
   {
     sender: 'James Hall',
-    content: 'Hey, James! Lets get to programming like a boss!'
+    content: 'Hey, James! Lets get to programming like a boss!',
+    time: 'March 31, 2016'
   },
 ]
 
